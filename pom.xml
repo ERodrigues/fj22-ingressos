@@ -148,6 +148,13 @@
                 </configuration>
             </plugin>
         </plugins>
-    </build>
+</build>
+
+	<developers>
+		<developer>
+			<name>Eder Rodrigues</name>
+			<email>ederpr@gmail.com</email>
+		</developer>
+	</developers>
 
 </project>
