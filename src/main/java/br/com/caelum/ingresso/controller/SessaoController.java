@@ -4,6 +4,7 @@ import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -29,12 +30,13 @@ public class SessaoController {
 		ModelAndView modelAndView = new ModelAndView("/sessao/sessao");
 		modelAndView.addObject("sala", salaDao.findOne(salaId));
 		modelAndView.addObject("filmes", filmeDao.findAll());
-		modelAndView.addObject("form", form);
+		modelAndView.addObject("form", form);		
 		
 		return modelAndView;
 	}
 	
 	@PostMapping("/admin/sessao")
+	@Transactional
 	public ModelAndView salva(@Valid SessaoForm form, BindingResult result) {
 		if (result.hasErrors()) {
 			return form(form.getSalaId(), form);
