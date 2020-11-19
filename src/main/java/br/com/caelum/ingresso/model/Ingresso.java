@@ -3,15 +3,18 @@ package br.com.caelum.ingresso.model;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
-import br.com.caelum.ingresso.model.descontos.Idesconto;
+import br.com.caelum.ingresso.model.descontos.TipoDeIngresso;
+import br.com.caelum.ingresso.model.Sessao; 
 
 public class Ingresso {
 	private Sessao sessao; 
 	private BigDecimal preco; 
+	private Lugar lugar; 
 	
-	public Ingresso(Sessao sessao, Idesconto tipoDeDesconto) {
+	public Ingresso(Sessao sessao, TipoDeIngresso tipoDeIngresso, Lugar lugar) {
 		this.sessao = sessao; 
-		this.preco = tipoDeDesconto.aplicarDescontoSobre(sessao.getPreco());
+		this.preco = tipoDeIngresso.aplicaDesconto(sessao.getPreco());
+		this.lugar = lugar; 
 	}
 	
 	public BigDecimal getPreco() {
