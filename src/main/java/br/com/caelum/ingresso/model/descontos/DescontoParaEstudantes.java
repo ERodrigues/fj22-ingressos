@@ -9,4 +9,10 @@ public class DescontoParaEstudantes implements Idesconto{
 		return precoOriginal.divide(new BigDecimal("2.0"));
 	}
 
+	@Override
+	public String getDescricao() {
+		// TODO Auto-generated method stub
+		return "Desconto para estudantes";
+	}
+
 }

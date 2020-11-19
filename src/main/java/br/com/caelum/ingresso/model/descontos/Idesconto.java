@@ -4,4 +4,6 @@ import java.math.BigDecimal;
 
 public interface Idesconto {
 	public BigDecimal aplicarDescontoSobre(BigDecimal precoOriginal);
+
+	public String getDescricao();
 }
