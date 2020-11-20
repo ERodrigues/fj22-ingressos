@@ -12,7 +12,7 @@ public class DescontoParaEstudantes implements Idesconto{
 	@Override
 	public String getDescricao() {
 		// TODO Auto-generated method stub
-		return "Desconto para estudantes";
+		return "Desconto Estudante";
 	}
 
 }

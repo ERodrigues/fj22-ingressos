@@ -16,7 +16,7 @@ public class DescontoParaBancos implements Idesconto{
 	@Override
 	public String getDescricao() {
 		// TODO Auto-generated method stub
-		return "Desconto para bancos";
+		return "Desconto banco";
 	}
 	
 }
