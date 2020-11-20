@@ -12,7 +12,7 @@ public class SemDesconto implements Idesconto{
 	@Override
 	public String getDescricao() {
 		// TODO Auto-generated method stub
-		return "Sem desconto";
+		return "Normal";
 	}
 
 }
